@@ -117,6 +117,7 @@ timeStart.addEventListener("input", () => {
       errorInput();
     } else {
       removeErrorInput();
+      filterData();
     }
     Array.from(periodButton.children).forEach((item) => {
       item.classList.remove("period-buttons__btn_active");
@@ -126,11 +127,11 @@ timeStart.addEventListener("input", () => {
 
 timeEnd.addEventListener("input", () => {
   if (timeStart.value !== "") {
-    console.log(timeStart.value);
     if (compareDates(timeStart.value, timeEnd.value)) {
       errorInput();
     } else {
       removeErrorInput();
+      filterData();
     }
     Array.from(periodButton.children).forEach((item) => {
       item.classList.remove("period-buttons__btn_active");
@@ -170,10 +171,93 @@ periodButton.addEventListener("click", (e) => {
     }
 
     timeStart.value = currentDate.toISOString().slice(0, 16);
-
+    filterData();
     Array.from(periodButton.children).forEach((item) => {
       item.classList.remove("period-buttons__btn_active");
     });
     target.classList.add("period-buttons__btn_active");
   }
 });
+
+//Запрос к серверу
+
+const tableAnalys = document.querySelector("tbody");
+
+let serverData = [];
+
+fetch(
+  "https://raw.githubusercontent.com/RammFire2103/botanique/refs/heads/main/server/db/data.json"
+)
+  .then((res) => res.json())
+  .then((res) => res.data)
+  .then((res) => {
+    serverData = res;
+    rerenderTable(serverData);
+  });
+
+function filterData() {
+  const start = new Date(timeStart.value),
+    end = new Date(timeEnd.value);
+
+  filteredData = serverData.filter((value) => {
+    const arr = value.startTime.replace(" ", ".", ":").split(".");
+    const valueDate = new Date(
+      arr[2] + "-" + arr[1] + "-" + arr[0] + "T" + arr[3]
+    );
+    return valueDate >= start && valueDate < end;
+  });
+
+  rerenderTable(filteredData);
+}
+
+function rerenderTable(rows) {
+  const table = document.querySelectorAll(".table__row-data");
+  table.forEach((item) => item.remove());
+
+  rows.forEach((item) => {
+    const startTime = `<p>${item.startTime}</p>`;
+    const workType = `
+              <p>
+                <span class="type">${item.workType.split("\n")[0]}</span><br />
+                ${item.workType.split("\n")[1]}
+              </p>`;
+
+    const works = item.works.split("\n");
+
+    let work = `<p>`;
+
+    works.forEach((item) => {
+      work += `<b>${item.split(":")[0]}:</b>${item.split(":")[1]}<br />`;
+    });
+
+    work += `</p>`;
+
+    const result = `
+              <p>
+                ${item.result}
+              </p>
+              <div></div>`;
+    const user = `<a href="#">${item.user}</a>`;
+    const tr = document.createElement("tr");
+    tr.classList.add("table__row-data");
+
+    tr.innerHTML = `
+    <td class="table__cell-data table__cell-data_analys">
+      ${startTime}
+    </td>
+    <td class="table__cell-data table__cell-data_analys">
+      ${workType}
+    </td>
+    <td class="table__cell-data table__cell-data_analys">
+      ${work}
+    </td>
+    <td class="table__cell-data table__cell-data_analys table__cell-data_result">
+      ${result}
+    </td>
+    <td class="table__cell-data table__cell-data_analys">
+      ${user}
+    </td>`;
+
+    tableAnalys.append(tr);
+  });
+}
