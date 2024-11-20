@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../src/fonts/Roboto-Medium.ttf");
+  src: url("./src/fonts/Roboto-Medium.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -266,15 +266,15 @@ header a {
 }
 
 .devices__notification_on {
-  background-image: url("../src/sprites/notification/noti_on.png");
+  background-image: url("./src/sprites/notification/noti_on.png");
 }
 
 .devices__notification_none {
-  background-image: url("../src/sprites/notification/noti_none.png");
+  background-image: url("./src/sprites/notification/noti_none.png");
 }
 
 .devices__notification_off {
-  background-image: url("../src/sprites/notification/noti_off.png");
+  background-image: url("./src/sprites/notification/noti_off.png");
 }
 
 /* Страница анализа */
@@ -421,7 +421,7 @@ hr {
   display: flex;
   width: 40px;
   height: 40px;
-  background-image: url("../src/sprites/time.png");
+  background-image: url("./src/sprites/time.png");
   background-repeat: no-repeat;
   background-position: center center;
   border: 1px solid #00000012;
@@ -469,7 +469,7 @@ hr {
   border-radius: 0 5px 5px 0;
   width: 24px;
   height: 24px;
-  background-image: url("../src/sprites/three-dots.png");
+  background-image: url("./src/sprites/three-dots.png");
   background-repeat: no-repeat;
   background-position: center center;
   box-sizing: content-box;
@@ -510,7 +510,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   align-self: center;
   min-width: 16px;
   height: 16px;
-  background-image: url("../src/sprites/arrow.png");
+  background-image: url("./src/sprites/arrow.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -644,7 +644,7 @@ tr {
 }
 
 .table__cell-data_result div {
-  background-image: url("../src/sprites/check.png");
+  background-image: url("./src/sprites/check.png");
   width: 20px;
   height: 20px;
 }
