@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="../src/sprites/new_logo.svg" />
+      <ul class="navigation">
+        <li class="navigation_active-page"><a>Главная</a></li>
+        <li><a href="./analytics.html">Аналитика</a></li>
+      </ul>
+      <img class="header__avatar" src="../src/sprites/User.svg" />
+    </header>
+    <div class="content-main">
+      <input
+        class="content-main__search"
+        type="text"
+        placeholder="Поиск прибора в Botanique по номеру, названию, подразделению и др."
+      />
+      <div class="wrapper">
+        <div class="wrapper__title">
+          <img src="../src/sprites/favorite.svg" />
+          <p>Любимые приборы</p>
+        </div>
+        <div class="devices">
+          <div class="devices__row">
+            <div class="devics__title">Приборы</div>
+            <div class="devics__status-title">Статус</div>
+          </div>
+
+          <div class="devices__row">
+            <img class="devices__img" src="../src/sprites/devices/pH.png" />
+            <p class="devices__name">
+              pH-метр Mettler-Toledo International, Inc. SevenCompact S220
+            </p>
+
+            <div class="dropdown dropdown_style_devices">
+              <input
+                type="text"
+                class="dropdown__input dropdown__input_style_devices"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+                placeholder="Свободен"
+                name="test"
+                readonly
+                required
+                data-input-dropdown
+              />
+              <ul
+                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+              >
+                <li>Занят</li>
+                <li>Обслуживане</li>
+              </ul>
+            </div>
+
+            <div class="devices__notification devices__notification_on"></div>
+          </div>
+
+          <div class="devices__row">
+            <img class="devices__img" src="../src/sprites/devices/Спектр.png" />
+            <p class="devices__name">Спектрофотометр Varian, Inc Cary 50 Bio</p>
+            <div class="dropdown dropdown_style_devices">
+              <input
+                type="text"
+                class="dropdown__input dropdown__input_style_devices"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+                placeholder="Свободен"
+                name="test"
+                readonly
+                required
+                data-input-dropdown
+              />
+              <ul
+                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+              >
+                <li>Занят</li>
+                <li>Обслуживане</li>
+              </ul>
+            </div>
+
+            <div class="devices__notification devices__notification_on"></div>
+          </div>
+
+          <div class="devices__row">
+            <img
+              class="devices__img"
+              src="../src/sprites/devices/Титратор.png"
+            />
+            <p class="devices__name">Титратор</p>
+            <div class="dropdown dropdown_style_devices">
+              <input
+                type="text"
+                class="dropdown__input dropdown__input_style_devices"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+                placeholder="Свободен"
+                name="test"
+                readonly
+                required
+                data-input-dropdown
+              />
+              <ul
+                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+              >
+                <li>Занят</li>
+                <li>Обслуживане</li>
+              </ul>
+            </div>
+
+            <div class="devices__notification devices__notification_none"></div>
+          </div>
+
+          <div class="devices__row">
+            <img
+              class="devices__img"
+              src="../src/sprites/devices/Коагулометр.png"
+            />
+            <p class="devices__name">Коагулометр Tcoag, KC 4 Delta</p>
+            <div class="dropdown dropdown_style_devices">
+              <input
+                type="text"
+                class="dropdown__input dropdown__input_style_devices"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+                placeholder="Свободен"
+                name="test"
+                readonly
+                required
+                data-input-dropdown
+              />
+              <ul
+                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+              >
+                <li>Занят</li>
+                <li>Обслуживане</li>
+              </ul>
+            </div>
+
+            <div class="devices__notification devices__notification_off"></div>
+          </div>
+
+          <div class="devices__row">
+            <img
+              class="devices__img"
+              src="../src/sprites/devices/Коагулометр.png"
+            />
+            <p class="devices__name">Коагулометр Tcoag, KC 4 Delta</p>
+            <div class="dropdown dropdown_style_devices">
+              <input
+                type="text"
+                class="dropdown__input dropdown__input_style_devices"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+                placeholder="Свободен"
+                name="test"
+                readonly
+                required
+                data-input-dropdown
+              />
+              <ul
+                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+              >
+                <li>Занят</li>
+                <li>Обслуживане</li>
+              </ul>
+            </div>
+
+            <div class="devices__notification devices__notification_off"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
