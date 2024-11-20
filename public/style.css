@@ -166,7 +166,21 @@ header a {
   font-size: 16px;
   padding: 16px;
   box-sizing: border-box;
+}
+
+.content-main__search__wrapper {
+  position: relative;
   margin-bottom: 48px;
+}
+
+.content-main__search__wrapper::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 30%;
+  width: 24px;
+  height: 24px;
+  background-image: url("./src/sprites/qr_code_scanner.png");
 }
 
 /* Стили любимых приборов */
