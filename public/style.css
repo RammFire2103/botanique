@@ -247,13 +247,14 @@ header a {
 
 .table_main {
   grid-template-columns:
-    minmax(40px, 7fr) minmax(100px, 72fr)
+    40px minmax(100px, 72fr)
     minmax(100px, 14fr) minmax(40px, 4fr);
   padding-left: 24px;
   padding-right: 24px;
   background-color: white;
   border-radius: 5px;
   gap: 16px;
+  overflow-y: hidden;
 }
 
 .table__cell-head_main {
