@@ -624,7 +624,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 .table_analys {
   grid-template-columns:
     minmax(120px, 15fr) minmax(130px, 12fr) minmax(450px, 46fr)
-    minmax(130px, 13fr) minmax(120px, 13fr);
+    minmax(150px, 13fr) minmax(120px, 13fr);
 }
 
 .table__cell-head_analys {
