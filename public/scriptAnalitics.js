@@ -261,3 +261,17 @@ function rerenderTable(rows) {
     tableAnalys.append(tr);
   });
 }
+
+const favorite = document.querySelector(".favorite");
+
+favorite.addEventListener("click", (e) => {
+  console.log(e.currentTarget.children[0].children[0].style);
+  if (
+    e.currentTarget.children[0].children[0].style.fill == "rgb(238, 63, 68)"
+  ) {
+    e.currentTarget.children[0].children[0].style.fill = "rgb(122,122,122)";
+  } else {
+    e.currentTarget.children[0].children[0].style.fill = "rgb(238, 63, 68)";
+    e.currentTarget.children[0].children[0].style.fillOpacity = "1";
+  }
+});

@@ -28,154 +28,214 @@
           <img src="./src/sprites/favorite.svg" />
           <p>Любимые приборы</p>
         </div>
-        <div class="devices">
-          <div class="devices__row">
-            <div class="devics__title">Приборы</div>
-            <div class="devics__status-title">Статус</div>
-          </div>
+        <table class="table table_main">
+          <thead>
+            <tr class="table__row-head">
+              <th class="table__cell-head table__cell-head_main"></th>
+              <th class="table__cell-head table__cell-head_main">Приборы</th>
+              <th class="table__cell-head table__cell-head_main">Статус</th>
+              <th class="table__cell-head table__cell-head_main"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table__row-data">
+              <td class="table__cell-data table__cell-data-main">
+                <img class="devices__img" src="./src/sprites/devices/pH.png" />
+              </td>
+              <td class="table__cell-data table__cell-data-main">
+                <p class="devices__name">
+                  pH-метр Mettler-Toledo International, Inc. SevenCompact S220
+                </p>
+              </td>
 
-          <div class="devices__row">
-            <img class="devices__img" src="./src/sprites/devices/pH.png" />
-            <p class="devices__name">
-              pH-метр Mettler-Toledo International, Inc. SevenCompact S220
-            </p>
+              <td class="table__cell-data table__cell-data-main">
+                <div class="dropdown dropdown_style_devices">
+                  <input
+                    type="text"
+                    class="dropdown__input dropdown__input_style_devices"
+                    data-bs-toggle="dropdown"
+                    data-bs-display="static"
+                    placeholder="Свободен"
+                    name="test"
+                    readonly
+                    required
+                    data-input-dropdown
+                  />
+                  <ul
+                    class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+                  >
+                    <li>Занят</li>
+                    <li>Обслуживане</li>
+                  </ul>
+                </div>
+              </td>
 
-            <div class="dropdown dropdown_style_devices">
-              <input
-                type="text"
-                class="dropdown__input dropdown__input_style_devices"
-                data-bs-toggle="dropdown"
-                data-bs-display="static"
-                placeholder="Свободен"
-                name="test"
-                readonly
-                required
-                data-input-dropdown
-              />
-              <ul
-                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
-              >
-                <li>Занят</li>
-                <li>Обслуживане</li>
-              </ul>
-            </div>
+              <td class="table__cell-data table__cell-data-main">
+                <div
+                  class="devices__notification devices__notification_on"
+                ></div>
+              </td>
+            </tr>
+            <tr class="table__row-data">
+              <td class="table__cell-data table__cell-data-main">
+                <img
+                  class="devices__img"
+                  src="./src/sprites/devices/Спектр.png"
+                />
+              </td>
+              <td class="table__cell-data table__cell-data-main">
+                <p class="devices__name">
+                  Спектрофотометр Varian, Inc Cary 50 Bio
+                </p>
+              </td>
 
-            <div class="devices__notification devices__notification_on"></div>
-          </div>
+              <td class="table__cell-data table__cell-data-main">
+                <div class="dropdown dropdown_style_devices">
+                  <input
+                    type="text"
+                    class="dropdown__input dropdown__input_style_devices"
+                    data-bs-toggle="dropdown"
+                    data-bs-display="static"
+                    placeholder="Свободен"
+                    name="test"
+                    readonly
+                    required
+                    data-input-dropdown
+                  />
+                  <ul
+                    class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+                  >
+                    <li>Занят</li>
+                    <li>Обслуживане</li>
+                  </ul>
+                </div>
+              </td>
 
-          <div class="devices__row">
-            <img class="devices__img" src="./src/sprites/devices/Спектр.png" />
-            <p class="devices__name">Спектрофотометр Varian, Inc Cary 50 Bio</p>
-            <div class="dropdown dropdown_style_devices">
-              <input
-                type="text"
-                class="dropdown__input dropdown__input_style_devices"
-                data-bs-toggle="dropdown"
-                data-bs-display="static"
-                placeholder="Свободен"
-                name="test"
-                readonly
-                required
-                data-input-dropdown
-              />
-              <ul
-                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
-              >
-                <li>Занят</li>
-                <li>Обслуживане</li>
-              </ul>
-            </div>
+              <td class="table__cell-data table__cell-data-main">
+                <div
+                  class="devices__notification devices__notification_on"
+                ></div>
+              </td>
+            </tr>
+            <tr class="table__row-data">
+              <td class="table__cell-data table__cell-data-main">
+                <img
+                  class="devices__img"
+                  src="./src/sprites/devices/Титратор.png"
+                />
+              </td>
+              <td class="table__cell-data table__cell-data-main">
+                <p class="devices__name">Титратор</p>
+              </td>
 
-            <div class="devices__notification devices__notification_on"></div>
-          </div>
+              <td class="table__cell-data table__cell-data-main">
+                <div class="dropdown dropdown_style_devices">
+                  <input
+                    type="text"
+                    class="dropdown__input dropdown__input_style_devices"
+                    data-bs-toggle="dropdown"
+                    data-bs-display="static"
+                    placeholder="Свободен"
+                    name="test"
+                    readonly
+                    required
+                    data-input-dropdown
+                  />
+                  <ul
+                    class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+                  >
+                    <li>Занят</li>
+                    <li>Обслуживане</li>
+                  </ul>
+                </div>
+              </td>
 
-          <div class="devices__row">
-            <img
-              class="devices__img"
-              src="./src/sprites/devices/Титратор.png"
-            />
-            <p class="devices__name">Титратор</p>
-            <div class="dropdown dropdown_style_devices">
-              <input
-                type="text"
-                class="dropdown__input dropdown__input_style_devices"
-                data-bs-toggle="dropdown"
-                data-bs-display="static"
-                placeholder="Свободен"
-                name="test"
-                readonly
-                required
-                data-input-dropdown
-              />
-              <ul
-                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
-              >
-                <li>Занят</li>
-                <li>Обслуживане</li>
-              </ul>
-            </div>
+              <td class="table__cell-data table__cell-data-main">
+                <div
+                  class="devices__notification devices__notification_on"
+                ></div>
+              </td>
+            </tr>
+            <tr class="table__row-data">
+              <td class="table__cell-data table__cell-data-main">
+                <img
+                  class="devices__img"
+                  src="./src/sprites/devices/Коагулометр.png"
+                />
+              </td>
+              <td class="table__cell-data table__cell-data-main">
+                <p class="devices__name">Коагулометр Tcoag, KC 4 Delta</p>
+              </td>
 
-            <div class="devices__notification devices__notification_none"></div>
-          </div>
+              <td class="table__cell-data table__cell-data-main">
+                <div class="dropdown dropdown_style_devices">
+                  <input
+                    type="text"
+                    class="dropdown__input dropdown__input_style_devices"
+                    data-bs-toggle="dropdown"
+                    data-bs-display="static"
+                    placeholder="Свободен"
+                    name="test"
+                    readonly
+                    required
+                    data-input-dropdown
+                  />
+                  <ul
+                    class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+                  >
+                    <li>Занят</li>
+                    <li>Обслуживане</li>
+                  </ul>
+                </div>
+              </td>
 
-          <div class="devices__row">
-            <img
-              class="devices__img"
-              src="./src/sprites/devices/Коагулометр.png"
-            />
-            <p class="devices__name">Коагулометр Tcoag, KC 4 Delta</p>
-            <div class="dropdown dropdown_style_devices">
-              <input
-                type="text"
-                class="dropdown__input dropdown__input_style_devices"
-                data-bs-toggle="dropdown"
-                data-bs-display="static"
-                placeholder="Свободен"
-                name="test"
-                readonly
-                required
-                data-input-dropdown
-              />
-              <ul
-                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
-              >
-                <li>Занят</li>
-                <li>Обслуживане</li>
-              </ul>
-            </div>
+              <td class="table__cell-data table__cell-data-main">
+                <div
+                  class="devices__notification devices__notification_on"
+                ></div>
+              </td>
+            </tr>
+            <tr class="table__row-data">
+              <td class="table__cell-data table__cell-data-main">
+                <img
+                  class="devices__img"
+                  src="./src/sprites/devices/Коагулометр.png"
+                />
+              </td>
+              <td class="table__cell-data table__cell-data-main">
+                <p class="devices__name">Коагулометр Tcoag, KC 4 Delta</p>
+              </td>
 
-            <div class="devices__notification devices__notification_off"></div>
-          </div>
+              <td class="table__cell-data table__cell-data-main">
+                <div class="dropdown dropdown_style_devices">
+                  <input
+                    type="text"
+                    class="dropdown__input dropdown__input_style_devices"
+                    data-bs-toggle="dropdown"
+                    data-bs-display="static"
+                    placeholder="Свободен"
+                    name="test"
+                    readonly
+                    required
+                    data-input-dropdown
+                  />
+                  <ul
+                    class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
+                  >
+                    <li>Занят</li>
+                    <li>Обслуживане</li>
+                  </ul>
+                </div>
+              </td>
 
-          <div class="devices__row">
-            <img
-              class="devices__img"
-              src="./src/sprites/devices/Коагулометр.png"
-            />
-            <p class="devices__name">Коагулометр Tcoag, KC 4 Delta</p>
-            <div class="dropdown dropdown_style_devices">
-              <input
-                type="text"
-                class="dropdown__input dropdown__input_style_devices"
-                data-bs-toggle="dropdown"
-                data-bs-display="static"
-                placeholder="Свободен"
-                name="test"
-                readonly
-                required
-                data-input-dropdown
-              />
-              <ul
-                class="dropdown__menu dropdown__menu_style_devices dropdown__menu_hide"
-              >
-                <li>Занят</li>
-                <li>Обслуживане</li>
-              </ul>
-            </div>
-
-            <div class="devices__notification devices__notification_off"></div>
-          </div>
-        </div>
+              <td class="table__cell-data table__cell-data-main">
+                <div
+                  class="devices__notification devices__notification_on"
+                ></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <script src="./scriptMain.js"></script>
